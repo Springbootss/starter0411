@@ -39,10 +39,9 @@ public class MemberController {
 
 	}
 	
-	
 	@RequestMapping("login")
 	public String login() {
-
+		System.out.println("aaa");
 		return "login";
 	}
 
