@@ -40,10 +40,20 @@ public class MemberController {
 	}
 	
 	
-	@RequestMapping("login")
+	
+	@RequestMapping("/home")
 	public String login() {
-
+		
 		return "login";
+	}
+
+	@PostMapping("/home")
+	public String Mypage(Member member,@RequestParam String mail, Model model) {
+
+		 model.addAttribute("mail", mail);
+
+		
+		return "loginsuccess";
 	}
 
 
